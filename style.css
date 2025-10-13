@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+    color: #2c2c2c;
+    line-height: 1.4;
+}
+.container {
+    max-width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.cv-content {
+    padding: 25px 35px;
+    height: 100%;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.header-left {
+    display: flex;
+    gap: 20px;
+}
+.profile-image {
+    width: 120px;
+    height: 150px;
+    border-radius: 10%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+.title {
+    font-size: 24px;
+    font-weight: bolder;
+    color: black;
+    line-height: 0.98;
+    letter-spacing: -0.3px;
+}
+.subtitle {
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    color: #555;
+}
+.contact-item::before {
+    content: "●";
+    color: #333;
+    margin-right: 8px;
+    font-size: 6px;
+}
+.contact-item a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.contact-item a:hover {
+    color: #333;
+}
+.section {
+    margin-bottom: 18px;
+}
+.section-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 6px;
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 1px;
+    background: #333;
+}
+.summary-text {
+    font-size: 10px;
+    color: #444;
+    line-height: 1.5;
+}
+.experience-item {
+    margin-bottom: 15px;
+}
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+.job-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+.date-range {
+    font-size: 9px;
+    color: #888;
+    font-weight: 400;
+}
+.company-name {
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 6px;
+}
+.responsibilities {
+    list-style: none;
+    padding-left: 0;
+}
+.responsibilities li {
+    font-size: 9px;
+    color: #555;
+    margin-bottom: 3px;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.4;
+}
+.responsibilities li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #333;
+    font-weight: 600;
+}
+.education-item {
+    margin-bottom: 12px;
+}
+.education-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 3px;
+}
+.education-details {
+    font-size: 9px;
+    color: #666;
+    line-height: 1.4;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skill-name {
+    font-size: 10px;
+    font-weight: 500;
+    color: #333;
+}
+.skill-level {
+    font-size: 9px;
+    color: #888;
+    font-weight: 400;
+}
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.language-item {
+    text-align: center;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+.language-name {
+    font-size: 10px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2px;
+}
+.language-level {
+    font-size: 9px;
+    color: #777;
+}
+.download-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+    z-index: 1000;
+}
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.download-btn::before {
+    content: "⬇ ";
+    margin-right: 8px;
+}
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+    .download-btn {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .cv-content {
+        padding: 30px 25px;
+    }
+    .header {
+        flex-direction: column;
+    }
+    .profile-image {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .skills-grid,
+    .languages-grid {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 28px;
+    }
+}
