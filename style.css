@@ -58,22 +58,22 @@ body {
     font-weight: 400;
     margin-bottom: 12px;
 }
+
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
+    text-align: right;
 }
+
 .contact-item {
-    display: flex;
-    align-items: center;
-    font-size: 10px;
+    font-size: 12px;
     color: #555;
+    position: relative;
 }
-.contact-item::before {
-    content: "●";
-    color: #333;
-    margin-right: 8px;
-    font-size: 6px;
+.icon{
+    margin-left: 4px;
+    color: #888;
 }
 .contact-item a {
     color: #555;
@@ -167,25 +167,21 @@ body {
     color: #666;
     line-height: 1.4;
 }
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-.skill-item {
+.skills-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
 }
-.skill-name {
+
+.skill-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #f0f0f0;
+    color: #333;
     font-size: 10px;
     font-weight: 500;
-    color: #333;
-}
-.skill-level {
-    font-size: 9px;
-    color: #888;
-    font-weight: 400;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
 }
 .languages-grid {
     display: grid;
@@ -195,7 +191,7 @@ body {
 .language-item {
     text-align: center;
     padding: 8px;
-    background: #f8f9fa;
+    background: #f0f0f0;
     border-radius: 4px;
 }
 .language-name {
@@ -228,10 +224,6 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-.download-btn::before {
-    content: "⬇ ";
-    margin-right: 8px;
-}
 @media print {
     body {
         background: white;
@@ -256,7 +248,6 @@ body {
         margin-left: 0;
         margin-top: 20px;
     }
-    .skills-grid,
     .languages-grid {
         grid-template-columns: 1fr;
     }
